@@ -91,49 +91,7 @@
             let seconds = String(now.getSeconds()).padStart(2, '0');
             document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
         }
-        setInterval(updateClock, 1000); // Update clock every second
-
-        // Alarm functionality
-        // let alarmTime = null;
-        // let alarmTimeout = null;
-
-        // document.getElementById('set-alarm-btn').addEventListener('click', () => {
-        //     const alarmInput = document.getElementById('alarm-time').value;
-        //     if (alarmInput) {
-        //         alarmTime = alarmInput;
-        //         const alarmMsg = `Alarm set for ${alarmTime}`;
-        //         document.getElementById('alarm-message').textContent = alarmMsg;
-        //         document.getElementById('clear-alarm-btn').disabled = false;
-        //         checkAlarm();
-        //     } else {
-        //         alert('Please select a valid alarm time.');
-        //     }
-        // });
-
-        // document.getElementById('clear-alarm-btn').addEventListener('click', () => {
-        //     clearAlarm();
-        // });
-
-        // function checkAlarm() {
-        //     const now = new Date();
-        //     const currentTime = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
-        //     if (alarmTime === currentTime) {
-        //         triggerAlarm();
-        //     }
-        //     alarmTimeout = setTimeout(checkAlarm, 1000);
-        // }
-
-        // function triggerAlarm() {
-        //     alert('Alarm ringing!');
-        //     clearAlarm();
-        // }
-
-        // function clearAlarm() {
-        //     alarmTime = null;
-        //     document.getElementById('alarm-message').textContent = '';
-        //     clearTimeout(alarmTimeout);
-        //     document.getElementById('clear-alarm-btn').disabled = true;
-        // }
+        setInterval(updateClock, 1000); 
 
         // Geolocation & Map
         function getLocation() {
